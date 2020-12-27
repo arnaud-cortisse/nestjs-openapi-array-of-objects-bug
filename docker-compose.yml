@@ -1,0 +1,13 @@
+version: "3.5"
+
+services:
+  nestjs: 
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    env_file:
+     - .env.dev
+    ports: 
+      - 3000:3000
+    volumes:
+      - .:/app
